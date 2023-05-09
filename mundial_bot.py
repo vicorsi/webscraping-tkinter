@@ -1,8 +1,8 @@
 from selenium import webdriver
+from selenium.webdriver.common.by import By
 import time
 import selenium
 
-from selenium.webdriver.common.by import By
 
 
 class Mundial:
@@ -15,9 +15,7 @@ class Mundial:
     def abrir_site(self):
         time.sleep(1)
         self.driver.get(self.SITE_LINK)
-        time.sleep(1)
         self.driver.find_element(By.XPATH, "/html/body/div[8]/div[2]/button").click()
-        time.sleep(1)
         self.driver.find_element(By.XPATH, "/html/body/main/div/section[3]/div/div[1]/div[1]/aside/div[2]/div[1]/div/div/div[3]/h5[1]").click()
         self.adidas()
 
@@ -38,11 +36,8 @@ class Mundial:
     def asics(self):
         time.sleep(1)
         self.driver.find_element(By.XPATH, "/html/body/main/div/section[3]/div/div[1]/div[1]/aside/div[2]/div[1]/div/div/div[3]/h5[1]").click()
-        time.sleep(1)
         self.driver.find_element(By.XPATH, "/html/body/main/div/section[3]/div/div[1]/div[1]/aside/div[2]/div[1]/div/div/div[3]/ul[7]/a").click()
-        time.sleep(1)
         self.driver.find_element(By.XPATH, "/html/body/main/div/section[3]/div/div[1]/div[1]/aside/div[2]/div[1]/div/div/div[3]/h5[1]").click()
-        time.sleep(1)
         self.driver.find_element(By.XPATH, "/html/body/main/div/section[3]/div/div[1]/div[1]/aside/div[2]/div[1]/div/div/div[3]/ul[7]/li[2]/a").click()
         self.lista_asics = []
         for i in range(10):
@@ -58,11 +53,8 @@ class Mundial:
     def cocacola(self):
         time.sleep(1)
         self.driver.find_element(By.XPATH, "/html/body/main/div/section[3]/div/div[1]/div[1]/aside/div[2]/div[1]/div/div/div[3]/h5[1]").click()
-        time.sleep(1)
         self.driver.find_element(By.XPATH, "/html/body/main/div/section[3]/div/div[1]/div[1]/aside/div[2]/div[1]/div/div/div[3]/ul[5]/a").click()
-        time.sleep(1)
         self.driver.find_element(By.XPATH, "/html/body/main/div/section[3]/div/div[1]/div[1]/aside/div[2]/div[1]/div/div/div[3]/h5[1]").click()
-        time.sleep(1)
         self.driver.find_element(By.XPATH, "/html/body/main/div/section[3]/div/div[1]/div[1]/aside/div[2]/div[1]/div/div/div[3]/ul[7]/li[5]/a").click()
         self.lista_cocacola = []
         for i in range(10):
@@ -78,11 +70,8 @@ class Mundial:
     def cavalera(self):
         time.sleep(1)
         self.driver.find_element(By.XPATH, "/html/body/main/div/section[3]/div/div[1]/div[1]/aside/div[2]/div[1]/div/div/div[3]/h5[1]").click()
-        time.sleep(1)
         self.driver.find_element(By.XPATH, "/html/body/main/div/section[3]/div/div[1]/div[1]/aside/div[2]/div[1]/div/div/div[3]/ul[4]/a").click()
-        time.sleep(1)
         self.driver.find_element(By.XPATH, "/html/body/main/div/section[3]/div/div[1]/div[1]/aside/div[2]/div[1]/div/div/div[3]/h5[1]").click()
-        time.sleep(1)
         self.driver.find_element(By.XPATH, "/html/body/main/div/section[3]/div/div[1]/div[1]/aside/div[2]/div[1]/div/div/div[3]/ul[7]/li[4]/a").click()
         self.lista_cavalera = []
         for i in range(10):
@@ -98,13 +87,9 @@ class Mundial:
     def tommy_hilfiger(self):
         time.sleep(1)
         self.driver.find_element(By.XPATH, "/html/body/main/div/section[3]/div/div[1]/div[1]/aside/div[2]/div[1]/div/div/div[3]/h5[1]").click()
-        time.sleep(1)
         self.driver.find_element(By.XPATH, "/html/body/main/div/section[3]/div/div[1]/div[1]/aside/div[2]/div[1]/div/div/div[3]/ul[3]/a").click()
-        time.sleep(1)
         self.driver.find_element(By.XPATH, "/html/body/main/div/section[3]/div/div[1]/div[1]/aside/div[2]/div[1]/div/div/div[3]/h5[1]").click()
-        time.sleep(1)
         self.driver.find_element(By.XPATH, "/html/body/main/div/section[3]/div/div[1]/div[1]/aside/div[2]/div[1]/div/div/div[3]/ul[7]/li[24]/a").click()
-        time.sleep(1)
         self.driver.find_element(By.XPATH, "/html/body/main/div/section[3]/div/div[1]/div[1]/aside/div[2]/div[1]/div/div/div[3]/ul[7]/li[22]/a").click()
         self.lista_tommy = []
         for i in range(10):

@@ -1,7 +1,7 @@
 from tkinter import *
 from tkinter import ttk
 from bot import Bot
-
+##teste##
 
 telinha = Tk()
 

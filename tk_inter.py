@@ -2,8 +2,6 @@ from tkinter import *
 from tkinter import ttk
 from mundial_bot import Mundial
 
-##teste##
-
 telinha = Tk()
 mundial_bot = Mundial()
 

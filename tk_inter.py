@@ -19,7 +19,7 @@ class Tela:
         telinha.mainloop()
 
     def tela(self):
-        self.telinha.title("Consultor Mundial Calçados")
+        self.telinha.title("Sistema De Consulta Mundial Calçados")
         self.telinha.configure(background="#fff")
         self.telinha.resizable(True, True)
 
@@ -31,18 +31,18 @@ class Tela:
         self.frame_2.place(relx=0.03, rely=0.50, relwidth=0.94, relheight=0.45)
 
     def botoes(self):
-        self.botao_grafico = Button(self.frame_1, font=("GothamPro", 13), background="#fff", text="Atualizar")
+        self.botao_grafico = Button(self.frame_1, font=("Helvetica", 13), background="#fff", text="Atualizar")
         self.botao_grafico.place(relx=0.63, rely=0.56, relwidth=0.1, relheight=0.13)
 
-        self.botao_confirma = Button(self.frame_1, font=("GothamPro", 13), background="#fff", text="Pesquisar")
+        self.botao_confirma = Button(self.frame_1, font=("Helvetica", 13), background="#fff", text="Pesquisar")
         self.botao_confirma.place(relx=0.27, rely=0.56, relwidth=0.1, relheight=0.13)
 
 
     def labels(self):
-        self.lb_input = Label(self.frame_1, font=("GothamPro", 15), text='Fabricante', bg='grey', fg="#fff")
+        self.lb_input = Label(self.frame_1, font=("Helvetica", 15), text='Fabricante', bg='grey', fg="#fff")
         self.lb_input.place(relx=0.40, rely=0.40, relwidth=0.20, relheight=0.15)
 
-        self.lbStatus = Label(self.frame_1, font=("GothamPro", 35), text='Consultar Tenis Mundial Calçados', fg='#fff', bg='grey')
+        self.lbStatus = Label(self.frame_1, font=("Helvetica", 35), text='Consultar Tenis Mundial Calçados', fg='#fff', bg='grey')
         self.lbStatus.place(relx=0.05, rely=0.05, relwidth=0.90, relheight=0.21)
 
 

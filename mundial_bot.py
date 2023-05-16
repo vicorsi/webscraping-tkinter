@@ -4,7 +4,6 @@ from selenium.webdriver.common.by import By
 import database
 import time
 
-
 class Mundial:
     def __init__(self):
         self.SITE_LINK = "https://www.mundialcalcados.com.br/tenis?&O=OrderByReleaseDateDESC"
@@ -12,6 +11,7 @@ class Mundial:
         self.driver.maximize_window()
         self.abrir_site()
         self.database_inserir()
+        self.database_delete()
 
     def abrir_site(self):
         time.sleep(1)
@@ -112,7 +112,6 @@ class Mundial:
             print(self.lista_tommy_nome[i])
             print(self.lista_tommy_valor[i])
 
-
     def database_inserir(self):
         for i in range(10):
             database.cur.execute(f"INSERT INTO tenis VALUES ('adidas', '{self.lista_adidas_nome[i]}', '{self.lista_adidas_valor[i]}')")
@@ -122,7 +121,14 @@ class Mundial:
             database.cur.execute(f"INSERT INTO tenis VALUES ('tommy hilfinger', '{self.lista_tommy_nome[i]}', '{self.lista_tommy_valor[i]}')")
             database.var.commit()
 
+    def database_delete(self):
+        database.cur.execute(f"DELETE FROM tenis")
+        database.var.commit()
 
-mun = Mundial()
+
+
+
+
+
 
 

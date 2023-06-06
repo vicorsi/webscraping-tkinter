@@ -1,5 +1,6 @@
 from selenium import webdriver
 from selenium.webdriver.common.by import By
+from selenium.webdriver.common.keys import Keys
 
 import database
 import time
@@ -77,8 +78,10 @@ class Mundial:
     def cavalera(self):
         time.sleep(1)
         self.driver.find_element(By.XPATH, "/html/body/main/div/section[3]/div/div[1]/div[1]/aside/div[2]/div[1]/div/div/div[3]/h5[1]").click()
+        time.sleep(1)
         self.driver.find_element(By.XPATH, "/html/body/main/div/section[3]/div/div[1]/div[1]/aside/div[2]/div[1]/div/div/div[3]/ul[4]/a").click()
         self.driver.find_element(By.XPATH, "/html/body/main/div/section[3]/div/div[1]/div[1]/aside/div[2]/div[1]/div/div/div[3]/h5[1]").click()
+        time.sleep(1)
         self.driver.find_element(By.XPATH, "/html/body/main/div/section[3]/div/div[1]/div[1]/aside/div[2]/div[1]/div/div/div[3]/ul[7]/li[4]/a").click()
         self.lista_cavalera_nome = []
         self.lista_cavalera_valor = []
@@ -95,11 +98,13 @@ class Mundial:
 
     def tommy_hilfiger(self):
         time.sleep(1)
-        self.driver.find_element(By.XPATH, "/html/body/main/div/section[3]/div/div[1]/div[1]/aside/div[2]/div[1]/div/div/div[3]/h5[1]").click()
-        self.driver.find_element(By.XPATH, "/html/body/main/div/section[3]/div/div[1]/div[1]/aside/div[2]/div[1]/div/div/div[3]/ul[3]/a").click()
-        self.driver.find_element(By.XPATH, "/html/body/main/div/section[3]/div/div[1]/div[1]/aside/div[2]/div[1]/div/div/div[3]/h5[1]").click()
-        self.driver.find_element(By.XPATH, "/html/body/main/div/section[3]/div/div[1]/div[1]/aside/div[2]/div[1]/div/div/div[3]/ul[7]/li[24]/a").click()
-        self.driver.find_element(By.XPATH, "/html/body/main/div/section[3]/div/div[1]/div[1]/aside/div[2]/div[1]/div/div/div[3]/ul[7]/li[22]/a").click()
+        self.driver.find_element(By.XPATH, "/html/body/header[1]/div[1]/div[3]/div[1]/div/div[3]/div/ul/li[4]/i").click()
+        time.sleep(1)
+        self.driver.find_element(By.XPATH, "/html/body/header[1]/div[1]/div[3]/div[1]/div/div[3]/div/div/fieldset/input[2]").click()
+        self.driver.find_element(By.XPATH, "/html/body/header[1]/div[1]/div[3]/div[1]/div/div[3]/div/div/fieldset/input[2]").send_keys("tommy")
+        self.driver.find_element(By.XPATH, "/html/body/header[1]/div[1]/div[3]/div[1]/div/div[3]/div/div/fieldset/input[2]").send_keys(Keys.ENTER)
+
+
         self.lista_tommy_nome = []
         self.lista_tommy_valor = []
         for i in range(10):
